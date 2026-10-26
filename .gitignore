@@ -1,0 +1,27 @@
+# --- Secrets: never commit these ---
+.env
+.env.*
+!.env.example
+
+# --- Python / Django ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+db.sqlite3
+staticfiles/
+
+# --- Node / Next.js ---
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# --- Vercel ---
+.vercel/
+
+# --- OS / editor junk ---
+.DS_Store
+.vscode/
+.idea/
