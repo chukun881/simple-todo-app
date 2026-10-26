@@ -25,3 +25,6 @@ next-env.d.ts
 .DS_Store
 .vscode/
 .idea/
+
+# --- Generated learning PDFs ---
+docs/learning/pdf/
