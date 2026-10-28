@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Our own colour palette and fonts. Tailwind turns each --color-* into
+   classes like bg-paper, text-ink, border-line, bg-accent ... */
+@theme {
+  --color-paper: #f5f2ec;
+  --color-card: #fffdf9;
+  --color-ink: #1d1b18;
+  --color-muted: #77706a;
+  --color-line: #e4ded4;
+  --color-accent: #2f5d50;
+  --color-accent-soft: #e3ece8;
+
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument), ui-serif, Georgia, serif;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Shared look for text inputs, selects and textareas. */
+@layer components {
+  .field {
+    @apply w-full rounded-lg border border-line bg-card px-3 py-2 text-sm text-ink placeholder:text-muted/70 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-lg px-3 py-2 text-sm text-muted transition hover:bg-line/60 hover:text-ink;
+  }
+}
