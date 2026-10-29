@@ -14,8 +14,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geist.variable} ${serif.variable} h-full antialiased`}>
-      <body className="min-h-full">
+    // suppressHydrationWarning: browser extensions (password managers, Grammarly…)
+    // often add attributes to <html>/<body> before React loads. This only hides
+    // attribute mismatches on these two tags, not real bugs in our components.
+    <html lang="en" className={`${geist.variable} ${serif.variable} h-full antialiased`} suppressHydrationWarning>
+      <body className="min-h-full" suppressHydrationWarning>
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
