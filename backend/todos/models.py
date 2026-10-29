@@ -59,7 +59,7 @@ class Todo(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = [F("due_date").asc(nulls_last=True), "-priority", "-created_at"]
+        ordering = ["is_completed", F("due_date").asc(nulls_last=True), "-priority", "-created_at"]
 
     def __str__(self):
         return self.title
