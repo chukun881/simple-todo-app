@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django.db.models import F
 
 
 class Category(models.Model):
@@ -58,7 +59,7 @@ class Todo(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ["-created_at"]
+        ordering = [F("due_date").asc(nulls_last=True), "-priority", "-created_at"]
 
     def __str__(self):
         return self.title
