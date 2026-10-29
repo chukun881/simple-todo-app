@@ -26,5 +26,5 @@ next-env.d.ts
 .vscode/
 .idea/
 
-# --- Generated learning PDFs ---
-docs/learning/pdf/
+# --- Claude Code local files (worktrees, settings) ---
+.claude/
