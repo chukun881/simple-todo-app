@@ -13,7 +13,6 @@ A full-stack, multi-user todo app built as a learning project.
 ```
 frontend/   Next.js app
 backend/    Django REST API
-docs/       ERD, git guide, learning log
 ```
 
 Setup and deployment instructions are added as each part is built.
