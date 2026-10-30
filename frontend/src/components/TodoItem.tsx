@@ -15,7 +15,7 @@ type Props = {
 // Badge colours per priority: High red, Medium amber, Low gray.
 const PRIORITY_STYLES = {
   High: "bg-red-50 text-red-700 ring-red-200",
-  Medium: "bg-amber-50 text-amber-800 ring-amber-200",
+  Medium: "bg-blue-50 text-blue-700 ring-blue-200",
   Low: "bg-stone-100 text-stone-600 ring-stone-200",
 };
 
